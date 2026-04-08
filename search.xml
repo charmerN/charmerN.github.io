@@ -19,20 +19,28 @@
 ]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
+    <title>搜索功能测试</title>
+    <url>/2026/04/08/%E6%90%9C%E7%B4%A2%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>这是一篇用于测试搜索功能的文章。</p>
+<p>关键词：Hexo、Butterfly、本地搜索</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>归档</title>
     <url>/archives/index.html</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>音乐</title>
-    <url>/music/index.html</url>
-    <content><![CDATA[<h1 id="我的音乐收藏"><a href="#我的音乐收藏" class="headerlink" title="我的音乐收藏"></a>我的音乐收藏</h1><p>这里可以添加你喜欢的音乐内容。</p>
-]]></content>
   </entry>
   <entry>
     <title>分类</title>
@@ -44,5 +52,16 @@
     <url>/movies/index.html</url>
     <content><![CDATA[<h1 id="我的视频收藏"><a href="#我的视频收藏" class="headerlink" title="我的视频收藏"></a>我的视频收藏</h1><p>这里可以添加你喜欢的视频内容。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>音乐</title>
+    <url>/music/index.html</url>
+    <content><![CDATA[<h1 id="我的音乐收藏"><a href="#我的音乐收藏" class="headerlink" title="我的音乐收藏"></a>我的音乐收藏</h1><p>这里可以添加你喜欢的音乐内容。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
