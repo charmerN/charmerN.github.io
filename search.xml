@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>搜索功能测试</title>
-    <url>/2026/04/08/%E6%90%9C%E7%B4%A2%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[<p>这是一篇用于测试搜索功能的文章。</p>
-<p>关键词：Hexo、Butterfly、本地搜索</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>测试</tag>
-        <tag>搜索</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2026/04/07/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -33,13 +19,32 @@
 ]]></content>
   </entry>
   <entry>
+    <title>搜索功能测试</title>
+    <url>/2026/04/08/%E6%90%9C%E7%B4%A2%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[<p>这是一篇用于测试搜索功能的文章。</p>
+<p>关键词：Hexo、Butterfly、本地搜索</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>搜索</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于</title>
     <url>/about/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
+    <title>归档</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -105,6 +110,60 @@
   #page.about #page-header {
     height: 800px !important;
   }
+
+  /* ========== 文章页标题和元信息定位到左下角 ========== */
+  #page-header.post-bg #post-info {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 50px !important;
+    left: 40px !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: 80% !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10 !important;
+  }
+
+  #page-header.post-bg #post-info > * {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    text-align: left !important;
+  }
+
+  #page-header.post-bg #post-info .post-title {
+    text-align: left !important;
+    font-size: 2.2em !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta {
+    text-align: left !important;
+    font-size: 0.95em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta .meta-firstline,
+  #page-header.post-bg #post-info #post-meta .meta-secondline {
+    display: inline-block !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
 }
 
 /* ========== 超大屏幕优化 ========== */
@@ -114,6 +173,16 @@
     background-position: center 30% !important;
     background-attachment: fixed !important;
     min-height: 800px !important;
+  }
+
+  /* 超大屏幕调整文章标题位置 */
+  #page-header.post-bg #post-info {
+    bottom: 80px !important;
+    left: 80px !important;
+  }
+
+  #page-header.post-bg #post-info .post-title {
+    font-size: 2.5em !important;
   }
 }
 
@@ -127,6 +196,60 @@
     /* 移动端使用 scroll 而非 fixed，避免卡顿 */
     background-attachment: scroll !important;
   }
+
+  /* 移动端文章标题和元信息也放在左下角 */
+  #page-header.post-bg #post-info {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 20px !important;
+    left: 15px !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: calc(100% - 30px) !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10 !important;
+  }
+
+  #page-header.post-bg #post-info > * {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    text-align: left !important;
+  }
+
+  #page-header.post-bg #post-info .post-title {
+    text-align: left !important;
+    font-size: 1.8em !important;
+    margin-bottom: 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta {
+    text-align: left !important;
+    font-size: 0.85em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta .meta-firstline,
+  #page-header.post-bg #post-info #post-meta .meta-secondline {
+    display: block !important;
+    margin-bottom: 4px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
 }
 
 /* ========== 调整遮罩层，确保文字清晰 ========== */
@@ -139,17 +262,8 @@
 }
 
 
+
 ]]></content>
-  </entry>
-  <entry>
-    <title>归档</title>
-    <url>/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>音乐</title>
@@ -162,5 +276,10 @@
     <url>/movies/index.html</url>
     <content><![CDATA[<h1 id="我的视频收藏"><a href="#我的视频收藏" class="headerlink" title="我的视频收藏"></a>我的视频收藏</h1><p>这里可以添加你喜欢的视频内容。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>

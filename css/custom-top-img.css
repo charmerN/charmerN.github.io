@@ -58,6 +58,60 @@
   #page.about #page-header {
     height: 800px !important;
   }
+
+  /* ========== 文章页标题和元信息定位到左下角 ========== */
+  #page-header.post-bg #post-info {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 50px !important;
+    left: 40px !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: 80% !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10 !important;
+  }
+
+  #page-header.post-bg #post-info > * {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    text-align: left !important;
+  }
+
+  #page-header.post-bg #post-info .post-title {
+    text-align: left !important;
+    font-size: 2.2em !important;
+    margin-bottom: 10px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta {
+    text-align: left !important;
+    font-size: 0.95em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta .meta-firstline,
+  #page-header.post-bg #post-info #post-meta .meta-secondline {
+    display: inline-block !important;
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
 }
 
 /* ========== 超大屏幕优化 ========== */
@@ -67,6 +121,16 @@
     background-position: center 30% !important;
     background-attachment: fixed !important;
     min-height: 800px !important;
+  }
+
+  /* 超大屏幕调整文章标题位置 */
+  #page-header.post-bg #post-info {
+    bottom: 80px !important;
+    left: 80px !important;
+  }
+
+  #page-header.post-bg #post-info .post-title {
+    font-size: 2.5em !important;
   }
 }
 
@@ -80,6 +144,60 @@
     /* 移动端使用 scroll 而非 fixed，避免卡顿 */
     background-attachment: scroll !important;
   }
+
+  /* 移动端文章标题和元信息也放在左下角 */
+  #page-header.post-bg #post-info {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 20px !important;
+    left: 15px !important;
+    right: auto !important;
+    width: auto !important;
+    max-width: calc(100% - 30px) !important;
+    text-align: left !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    z-index: 10 !important;
+  }
+
+  #page-header.post-bg #post-info > * {
+    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: none !important;
+    text-align: left !important;
+  }
+
+  #page-header.post-bg #post-info .post-title {
+    text-align: left !important;
+    font-size: 1.8em !important;
+    margin-bottom: 8px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta {
+    text-align: left !important;
+    font-size: 0.85em !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #page-header.post-bg #post-info #post-meta .meta-firstline,
+  #page-header.post-bg #post-info #post-meta .meta-secondline {
+    display: block !important;
+    margin-bottom: 4px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
 }
 
 /* ========== 调整遮罩层，确保文字清晰 ========== */
@@ -90,5 +208,6 @@
     rgba(0, 0, 0, 0.5) 100%
   ) !important;
 }
+
 
 
