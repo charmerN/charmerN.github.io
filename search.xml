@@ -33,22 +33,17 @@
 ]]></content>
   </entry>
   <entry>
-    <title>归档</title>
-    <url>/archives/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>关于</title>
-    <url>/about/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>分类</title>
     <url>/categories/index.html</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>视频</title>
+    <title>归档</title>
+    <url>/archives/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>视频11111</title>
     <url>/movies/index.html</url>
     <content><![CDATA[<h1 id="我的视频收藏"><a href="#我的视频收藏" class="headerlink" title="我的视频收藏"></a>我的视频收藏</h1><p>这里可以添加你喜欢的视频内容。</p>
 ]]></content>
@@ -63,5 +58,109 @@
     <url>/music/index.html</url>
     <content><![CDATA[<h1 id="我的音乐收藏"><a href="#我的音乐收藏" class="headerlink" title="我的音乐收藏"></a>我的音乐收藏</h1><p>这里可以添加你喜欢的音乐内容。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/css/custom-top-img.css</url>
+    <content><![CDATA[/* Butterfly 主题顶部图片视差滚动优化 */
+
+/* ========== 电脑端 - 启用视差效果 ========== */
+@media screen and (min-width: 768px) {
+
+  /* 所有页面的通用设置 */
+  #page-header {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    /* 核心：启用视差滚动效果 */
+    background-attachment: fixed !important;
+    /* 添加过渡效果，让滚动更平滑 */
+    transition: all 0.3s ease;
+  }
+
+  /* 归档页 */
+  #archive #page-header {
+    height: 800px !important;
+  }
+
+  /* 标签总览页 */
+  #page.tags #page-header {
+    height: 800px !important;
+  }
+
+  /* 分类总览页 */
+  #page.categories #page-header {
+    height: 800px !important;
+  }
+
+  /* 音乐页 */
+  #page.music #page-header {
+    height: 800px !important;
+  }
+
+  /* 视频页 */
+  #page.movies #page-header {
+    height: 800px !important;
+  }
+
+  /* 标签详情页 */
+  #page.tag #page-header {
+    height: 800px !important;
+  }
+
+  /* 分类详情页 */
+  #page.category #page-header {
+    height: 800px !important;
+  }
+
+  /* 文章详情页 */
+  #post #page-header {
+    height: 800px !important;
+  }
+
+  /* 关于页面 */
+  #page.about #page-header {
+    height: 800px !important;
+  }
+}
+
+/* ========== 超大屏幕优化 ========== */
+@media screen and (min-width: 1920px) {
+  #page-header {
+    background-size: cover !important;
+    background-position: center 30% !important;
+    background-attachment: fixed !important;
+    min-height: 800px !important;
+  }
+}
+
+/* ========== 移动端 - 禁用视差（性能优化）========== */
+@media screen and (max-width: 767px) {
+  #page-header {
+    height: auto !important;
+    min-height: 300px !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    /* 移动端使用 scroll 而非 fixed，避免卡顿 */
+    background-attachment: scroll !important;
+  }
+}
+
+/* ========== 调整遮罩层，确保文字清晰 ========== */
+#page-header::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  ) !important;
+}
+
+
+]]></content>
+  </entry>
+  <entry>
+    <title>关于</title>
+    <url>/about/index.html</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
