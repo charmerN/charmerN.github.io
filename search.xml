@@ -43,11 +43,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>分类</title>
-    <url>/categories/index.html</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title></title>
     <url>/css/custom-top-img.css</url>
     <content><![CDATA[/* Butterfly 主题顶部图片视差滚动优化 */
@@ -266,9 +261,23 @@
 ]]></content>
   </entry>
   <entry>
+    <title>分类</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>标签</title>
+    <url>/tags/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>音乐</title>
     <url>/music/index.html</url>
     <content><![CDATA[<h1 id="我的音乐收藏"><a href="#我的音乐收藏" class="headerlink" title="我的音乐收藏"></a>我的音乐收藏</h1><p>这里可以添加你喜欢的音乐内容。</p>
+ 
+    <div id="aplayer-GGvSZwdz" class="aplayer aplayer-tag-marker meting-tag-marker"
+         data-id="180339813" data-server="netease" data-type="album" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#3F51B5"
+    ></div>
 ]]></content>
   </entry>
   <entry>
@@ -276,10 +285,5 @@
     <url>/movies/index.html</url>
     <content><![CDATA[<h1 id="我的视频收藏"><a href="#我的视频收藏" class="headerlink" title="我的视频收藏"></a>我的视频收藏</h1><p>这里可以添加你喜欢的视频内容。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>标签</title>
-    <url>/tags/index.html</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
