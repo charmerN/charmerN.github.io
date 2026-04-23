@@ -226,7 +226,7 @@
   } else {
     window.loadOtherComment = loadWaline
   }
-})()</script></div><div class="aplayer no-destroy" data-id="180339813" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-volume="0.05"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/metingjs/dist/Meting.min.js"></script><script>(() => {
+})()</script></div><div class="aplayer no-destroy" data-id="180339813" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-volume="0.05"></div><link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/meting/2.0.1/Meting.min.js"></script><script>(() => {
   const destroyAplayer = () => {
     if (window.aplayers) {
       for (let i = 0; i < window.aplayers.length; i++) {
@@ -238,11 +238,15 @@
   }
 
   const runMetingJS = () => {
-    typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+    if (typeof loadMeting === 'function') {
+      loadMeting()
+    }
   }
 
   btf.addGlobalFn('pjaxSend', destroyAplayer, 'destroyAplayer')
-  btf.addGlobalFn('pjaxComplete', loadMeting, 'runMetingJS')
+  btf.addGlobalFn('pjaxComplete', runMetingJS, 'runMetingJS')
+
+  document.addEventListener('DOMContentLoaded', runMetingJS)
 })()</script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js" defer="defer"></script><script>document.addEventListener('DOMContentLoaded', () => {
   const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
 
